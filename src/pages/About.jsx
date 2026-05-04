@@ -258,6 +258,30 @@ const About = ({ darkMode = true }) => {
             </div>
           </section>
 
+          {/* Education SECTION */}
+          <section id="Studies" className="scroll-mt-40">
+            <h3 className="text-3xl font-bold uppercase tracking-tighter mb-12">
+              Education Background
+            </h3>
+            <div className={`relative pl-10 border-l ${theme.border}`}>
+              <div className="group relative">
+                <div className="absolute w-3 h-3 bg-[#89dfed] rounded-full left-[-41.5px] top-1.5 shadow-[0_0_15px_#89dfed]"></div>
+                <h4 className="text-lg font-bold uppercase">
+                  BS Computer Engineering
+                </h4>
+                <p
+                  className={`${theme.subText} text-xs tracking-[0.2em] uppercase mt-1 mb-4`}
+                >
+                  STI College San Pablo • 2015 — 2020
+                </p>
+                <p className={`${theme.subText} text-base max-w-xl`}>
+                  Developing scalable internal tools and centralized ticketing
+                  systems.
+                </p>
+              </div>
+            </div>
+          </section>
+
           {/* SKILLS GRID */}
           <section id="Skills" className="scroll-mt-40 space-y-16">
             <h3 className="text-3xl font-bold uppercase tracking-tighter">
@@ -267,8 +291,8 @@ const About = ({ darkMode = true }) => {
               <div key={category} className="space-y-6">
                 <h4 className="text-[10px] font-bold uppercase tracking-[0.3em] opacity-40 border-l-2 border-[#89dfed] pl-4">
                   {category === "frontend"
-                    ? "Client Side"
-                    : "Server & Architecture"}
+                    ? "Frontend"
+                    : "Backend & Server Architecture"}
                 </h4>
                 <div className="grid grid-cols-2 sm:grid-cols-5 gap-4">
                   {skills.map((skill, index) => (
