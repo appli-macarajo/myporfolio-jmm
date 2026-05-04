@@ -1,4 +1,6 @@
+import { useNavigate } from "react-router-dom";
 const Hero = ({ darkMode }) => {
+  const navigate = useNavigate();
   return (
     <section className="pt-40 pb-20 px-6 text-center max-w-4xl mx-auto">
       <div
@@ -44,6 +46,7 @@ const Hero = ({ darkMode }) => {
       </p>
 
       <button
+        onClick={() => navigate("/about")}
         className="group inline-flex items-center gap-3 px-3 py-2 rounded-full border transition-all duration-300 cursor-pointer 
         border-black/10 bg-black/0 hover:bg-black/10 hover:border-black/20
         dark:border-white/10 dark:bg-white/0 dark:hover:bg-white/10 dark:hover:border-white/20"
