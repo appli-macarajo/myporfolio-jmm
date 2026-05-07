@@ -125,7 +125,7 @@ const About = ({ darkMode = true }) => {
       {/* 1. Asia/Manila Info (Exact Match) */}
       <motion.div
         variants={itemVariants}
-        className="absolute top-6 left-6 text-xs text-gray-500 uppercase tracking-widest z-50"
+        className="fixed top-6 left-6 text-xs text-gray-500 uppercase tracking-widest z-50"
       >
         Asia/Manila
       </motion.div>
@@ -133,7 +133,7 @@ const About = ({ darkMode = true }) => {
       {/* 2. Real-time Clock (Exact Match) */}
       <motion.div
         variants={itemVariants}
-        className="absolute top-6 right-6 text-xs text-gray-500 font-mono z-50"
+        className="fixed top-6 right-6 text-xs text-gray-500 font-mono z-50"
       >
         {currentTime}
       </motion.div>
@@ -227,10 +227,14 @@ const About = ({ darkMode = true }) => {
             <p
               className={`text-lg ${darkMode ? "text-zinc-400" : "text-zinc-600"} leading-relaxed max-w-2xl font-light`}
             >
-              I build enterprise-grade systems with a focus on{" "}
-              <strong>C#, .NET, and React</strong>. Currently contributing to
-              digital transformation at{" "}
-              <strong>Brother Industries Philippines</strong>.
+              I am a Full-stack developer with 4 years of experience
+              specializing in the design and development of enterprise-grade
+              systems. My core expertise lies in building robust backends using{" "}
+              <strong>C#</strong> and <strong>ASP.NET Core</strong>, paired with
+              dynamic, responsive frontends developed in{" "}
+              <strong>React JS</strong>. Additionally, I have a strong
+              foundation in <strong>Vanilla PHP</strong>, allowing me to
+              maintain and evolve a diverse range of web architectures.
             </p>
           </section>
 
@@ -251,8 +255,10 @@ const About = ({ darkMode = true }) => {
                   Brother Industries • 2022 — Present
                 </p>
                 <p className={`${theme.subText} text-base max-w-xl`}>
-                  Developing scalable internal tools and centralized ticketing
-                  systems.
+                  Results-oriented Full Stack Developer specializing in the .NET
+                  ecosystem (ASP.NET Core, MVC) and core web technologies.
+                  Expert in developing robust APIs, managing intricate SQL
+                  databases, and implementing responsive design.
                 </p>
               </div>
             </div>
@@ -275,8 +281,11 @@ const About = ({ darkMode = true }) => {
                   STI College San Pablo • 2015 — 2020
                 </p>
                 <p className={`${theme.subText} text-base max-w-xl`}>
-                  Developing scalable internal tools and centralized ticketing
-                  systems.
+                  Studied the integration of hardware and software systems,
+                  focusing on circuit design, microprocessor architecture, and
+                  embedded systems. Object-Oriented Programming, Database
+                  Management Systems, Data Structures & Algorithms, and Software
+                  Engineering.
                 </p>
               </div>
             </div>

@@ -40,8 +40,7 @@ const Hero = ({ darkMode }) => {
           <span style={{ fontWeight: 700, fontSize: "16px" }}>
             Brother Industries Philippines
           </span>{" "}
-          , where I craft intuitive user experiences. After hours, I build my
-          own projects.
+          , where I craft intuitive user experiences and build projects.
         </span>
       </p>
 

@@ -40,7 +40,7 @@ const Home = () => {
       {/* 1. Asia/Manila Info */}
       <motion.div
         variants={itemVariants}
-        className="absolute top-6 left-6 text-xs text-gray-500 uppercase tracking-widest"
+        className="fixed top-6 left-6 text-xs text-gray-500 uppercase tracking-widest"
       >
         Asia/Manila
       </motion.div>
@@ -48,7 +48,7 @@ const Home = () => {
       {/* 2. Real-time Clock */}
       <motion.div
         variants={itemVariants}
-        className="absolute top-6 right-6 text-xs text-gray-500 font-mono"
+        className="fixed top-6 right-6 text-xs text-gray-500 font-mono"
       >
         {new Date().toLocaleTimeString([], {
           hour: "2-digit",

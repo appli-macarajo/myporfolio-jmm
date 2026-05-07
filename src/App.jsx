@@ -5,6 +5,8 @@ import { AnimatePresence } from "framer-motion";
 import Home from "./pages/Home";
 import Navbar from "./components/Navbar";
 import About from "./pages/About";
+import Work from "./pages/Work";
+import ProjectDetails from "./pages/ProjectDetails";
 
 function App() {
   const [darkMode, setDarkMode] = useState(true);
@@ -26,7 +28,11 @@ function App() {
           <Routes location={location} key={location.pathname}>
             <Route path="/" element={<Home darkMode={darkMode} />} />
             <Route path="/about" element={<About darkMode={darkMode} />} />
-            <Route path="/work" element={<Home darkMode={darkMode} />} />
+            <Route path="/work" element={<Work darkMode={darkMode} />} />
+            <Route
+              path="/work/:id"
+              element={<ProjectDetails darkMode={darkMode} />}
+            />
             <Route path="/blog" element={<Home darkMode={darkMode} />} />
             <Route path="/gallery" element={<Home darkMode={darkMode} />} />
           </Routes>
