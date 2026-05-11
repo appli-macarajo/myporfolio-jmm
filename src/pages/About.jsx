@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
-
+import myResume from "../assets/Resume_JohnMichaelMacaraig.pdf"; // Adjust the dots depending on your folder depth
 import {
   BiCodeCurly,
   BiTerminal,
@@ -12,20 +12,21 @@ import {
   BiLogoBootstrap,
   BiLogoPostgresql,
   BiServer,
+  BiDownload, // Added Download Icon
 } from "react-icons/bi";
 
 const About = ({ darkMode = true }) => {
   const [activeSection, setActiveSection] = useState("Introduction");
   const [currentTime, setCurrentTime] = useState("");
 
-  // 1. Framer Motion Animation Variants (EXACT MATCH WITH HOME)
+  // 1. Framer Motion Animation Variants
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
       opacity: 1,
       transition: {
-        delayChildren: 1.0, // Matched to Home
-        staggerChildren: 0.3, // Matched to Home
+        delayChildren: 1.0,
+        staggerChildren: 0.3,
       },
     },
   };
@@ -70,6 +71,9 @@ const About = ({ darkMode = true }) => {
     border: darkMode ? "border-zinc-800/40" : "border-zinc-200",
     subText: darkMode ? "text-zinc-500" : "text-zinc-400",
     card: darkMode ? "bg-zinc-900/40" : "bg-zinc-100/50",
+    btnHover: darkMode
+      ? "hover:bg-white hover:text-black"
+      : "hover:bg-black hover:text-white",
   };
 
   // 4. Scroll Observer
@@ -122,7 +126,7 @@ const About = ({ darkMode = true }) => {
       animate="visible"
       className="min-h-screen relative font-sans transition-colors duration-500 overflow-x-hidden"
     >
-      {/* 1. Asia/Manila Info (Exact Match) */}
+      {/* 1. Asia/Manila Info */}
       <motion.div
         variants={itemVariants}
         className="fixed top-6 left-6 text-xs text-gray-500 uppercase tracking-widest z-50"
@@ -130,7 +134,7 @@ const About = ({ darkMode = true }) => {
         Asia/Manila
       </motion.div>
 
-      {/* 2. Real-time Clock (Exact Match) */}
+      {/* 2. Real-time Clock */}
       <motion.div
         variants={itemVariants}
         className="fixed top-6 right-6 text-xs text-gray-500 font-mono z-50"
@@ -155,7 +159,7 @@ const About = ({ darkMode = true }) => {
               onClick={() =>
                 document
                   .getElementById(id)
-                  ?.scrollIntoView({ behavior: "smooth" })
+                  .scrollIntoView({ behavior: "smooth" })
               }
               className={`group flex items-center gap-4 cursor-pointer transition-all duration-300 ${isActive ? theme.activeText : "hover:text-zinc-300"}`}
             >
@@ -186,7 +190,7 @@ const About = ({ darkMode = true }) => {
                 />
               </div>
             </div>
-            <div className="mt-8 space-y-4 text-center">
+            <div className="mt-8 space-y-6 text-center flex flex-col items-center">
               <div className="flex justify-center gap-2">
                 {["English", "Filipino"].map((l) => (
                   <span
@@ -197,6 +201,16 @@ const About = ({ darkMode = true }) => {
                   </span>
                 ))}
               </div>
+
+              {/* DOWNLOAD BUTTON */}
+              <a
+                href={myResume} // Use the imported variable here
+                download="John_Michael_Macaraig_Resume.pdf"
+                className={`group flex items-center gap-3 px-6 py-3 rounded-full border ${theme.border} ${theme.card} ${theme.btnHover} transition-all duration-300 text-[10px] font-bold uppercase tracking-[0.2em] w-fit shadow-lg shadow-black/5`}
+              >
+                <BiDownload className="text-lg group-hover:animate-bounce" />
+                <span>Download Resume</span>
+              </a>
             </div>
           </div>
         </motion.div>
@@ -206,6 +220,7 @@ const About = ({ darkMode = true }) => {
           variants={itemVariants}
           className="md:col-span-8 space-y-32 pb-40"
         >
+          {/* ... Introduction, Experience, Education, and Skills sections remain exactly as before ... */}
           <section id="Introduction" className="scroll-mt-40">
             <div className="relative inline-flex items-center gap-3 px-4 py-1.5 rounded-full text-[11px] mb-10 overflow-hidden transition-all duration-500 bg-black/20 dark:bg-white/5 bg-linear-to-r from-transparent via-[#89dfed]/15 to-transparent animate-flow-cyan border border-[#89dfed]/20 dark:border-[#89dfed]/30">
               <span className="relative z-10 font-bold text-white tracking-wide uppercase">
@@ -238,7 +253,6 @@ const About = ({ darkMode = true }) => {
             </p>
           </section>
 
-          {/* EXPERIENCE SECTION */}
           <section id="Work" className="scroll-mt-40">
             <h3 className="text-3xl font-bold uppercase tracking-tighter mb-12">
               Experience
@@ -264,7 +278,6 @@ const About = ({ darkMode = true }) => {
             </div>
           </section>
 
-          {/* Education SECTION */}
           <section id="Studies" className="scroll-mt-40">
             <h3 className="text-3xl font-bold uppercase tracking-tighter mb-12">
               Education Background
@@ -291,7 +304,6 @@ const About = ({ darkMode = true }) => {
             </div>
           </section>
 
-          {/* SKILLS GRID */}
           <section id="Skills" className="scroll-mt-40 space-y-16">
             <h3 className="text-3xl font-bold uppercase tracking-tighter">
               Technical Stack

@@ -1,13 +1,5 @@
 import { Link, useLocation } from "react-router-dom";
-import {
-  FiHome,
-  FiUser,
-  FiBriefcase,
-  FiEdit3,
-  FiImage,
-  FiSun,
-  FiMoon,
-} from "react-icons/fi";
+import { FiHome, FiUser, FiBriefcase, FiSun, FiMoon } from "react-icons/fi";
 
 // Ensure the props are wrapped in { } for destructuring
 const Navbar = ({ darkMode, setDarkMode }) => {
@@ -59,20 +51,6 @@ const Navbar = ({ darkMode, setDarkMode }) => {
             icon={<FiBriefcase />}
             label="Work"
             active={location.pathname === "/work"}
-            darkMode={darkMode}
-          />
-          <NavItem
-            to="/blog"
-            icon={<FiEdit3 />}
-            label="Blog"
-            active={location.pathname === "/blog"}
-            darkMode={darkMode}
-          />
-          <NavItem
-            to="/gallery"
-            icon={<FiImage />}
-            label="Gallery"
-            active={location.pathname === "/gallery"}
             darkMode={darkMode}
           />
         </div>

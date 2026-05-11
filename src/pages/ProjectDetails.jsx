@@ -8,6 +8,16 @@ import ticketingImg from "../assets/ticketing.png";
 import ticketingImg2 from "../assets/ticketing2.png";
 import ticketingImg3 from "../assets/ticketing3.png";
 
+import tmsImg from "../assets/tms.png";
+import tmsImg1 from "../assets/tms0.png";
+import tmsImg2 from "../assets/tms2.png";
+import tmsImg3 from "../assets/tms3.png";
+import portalImg from "../assets/iportalv2.png";
+import bimmsImg from "../assets/bimms0.png";
+import taskImg1 from "../assets/tasksched.png";
+import taskImg2 from "../assets/tasksched1.png";
+import taskImg from "../assets/tasksched0.png";
+
 const ProjectDetails = ({ darkMode = true }) => {
   const { id } = useParams();
   const navigate = useNavigate();
@@ -66,31 +76,132 @@ const ProjectDetails = ({ darkMode = true }) => {
       images: [ticketingImg, ticketingImg2, ticketingImg3],
     },
     {
-      slug: "portfolio-v1",
-      title: "Portfolio v1",
-      date: "MARCH 10, 2024",
+      slug: "training-management-system",
+      title: "Training Management System",
+      date: "APRIL 18, 2024",
       author: "John Michael Macaraig",
       overview:
-        "Development of a high-performance personal brand identity and portfolio using modern web technologies and fluid motion design.",
+        "A dynamic enterprise training platform engineered to digitize employee skill development through a custom multi-tier approval logic engine and centralized record management.",
       features: [
         {
-          title: "Framer Motion",
+          title: "Multi-Tier Approval Logic",
           detail:
-            "Utilized complex staggered animations and layout transitions to create a premium, interactive user experience.",
+            "Engineered a custom routing engine to manage training requests through a sophisticated Supervisor, Manager, and PIC approval workflow.",
         },
         {
-          title: "Tailwind v4 Integration",
+          title: "IPortal & Session Sync",
           detail:
-            "Leveraged the latest Tailwind CSS features for rapid, maintainable styling and design system consistency.",
+            "Implemented robust session management and IPortal synchronization to ensure secure authentication and persistent user state across all modules.",
         },
         {
-          title: "Responsive Architecture",
+          title: "AD & SQL Optimization",
           detail:
-            "Ensured a flawless experience across all devices using fluid typography and mobile-first container logic.",
+            "Optimized data retrieval via complex SQL JOINs and Active Directory integration to deliver personalized employee training histories and departmental records.",
+        },
+        {
+          title: "Transactional Data Integrity",
+          detail:
+            "Developed a responsive Bootstrap 5 dashboard utilizing SQLSRV transactional logic to ensure high-speed data integrity during concurrent updates.",
         },
       ],
-      tags: ["Vite", "Tailwind CSS v4", "Framer Motion"],
-      images: ["/projects/portfolio.png"],
+      tags: ["Vanilla PHP,", "SQL Server", "Bootstrap", "HTML", "CSS"],
+      images: [tmsImg1, tmsImg, tmsImg2, tmsImg3],
+    },
+    {
+      slug: "iportal-system",
+      title: "IPORTAL System",
+      date: "MARCH 20, 2026", // Adjusted based on your recent activity
+      author: "John Michael Macaraig",
+      overview:
+        "A high-performance desktop gateway architected to centralize access for 4,000+ users, functioning as a unified 'Steam-style' launcher for all in-house enterprise applications.",
+      features: [
+        {
+          title: "MVC Desktop Architecture",
+          detail:
+            "Architected using WinForms (C#) under a strict MVC pattern to ensure a clean separation of concerns and high-speed performance.",
+        },
+        {
+          title: "Real-time Search Engine",
+          detail:
+            "Engineered an asynchronous search engine using C# Task Parallel Library to dynamically filter system catalogs without freezing the UI.",
+        },
+        {
+          title: "Enterprise Security (RBAC)",
+          detail:
+            "Integrated Active Directory (DirectoryServices) to enforce Role-Based Access Control and secure session management with automated logout protocols.",
+        },
+        {
+          title: "Custom GDI+ UI",
+          detail:
+            "Developed a specialized 'Windows XP-meets-Steam' aesthetic using custom GDI+ rendering for a unique, high-performance user interface.",
+        },
+      ],
+      tags: ["C#", "Winforms(MVC)", "SQL Server"],
+      images: [portalImg],
+    },
+    {
+      slug: "budget-and-indirect-material-system",
+      title: "Budget & Indirect Material Management System",
+      date: "MAY 05, 2026",
+      author: "John Michael Macaraig",
+      overview:
+        "An end-to-end inventory and procurement governance platform featuring a Slate Blue dark-themed interface, designed to automate complex approval lifecycles and ensure strict budget compliance.",
+      features: [
+        {
+          title: "Cross-Platform SSO Integration",
+          detail:
+            "Engineered a custom Single Sign-On (SSO) solution using ASP.NET Core and React to bridge authentication between legacy PHP environments and modern .NET iPortal systems.",
+        },
+        {
+          title: "Automated Approval Workflow",
+          detail:
+            "Streamlined enterprise budget control by implementing a multi-stage routing system (Budget Controller to Senior Management) with real-time status tracking.",
+        },
+        {
+          title: "Collision-Resistant Transaction Engine",
+          detail:
+            "Architected a high-performance transaction logic (Date-Timestamp-Counter) to manage high-frequency inventory requests and ensure data integrity.",
+        },
+        {
+          title: "Data Analytics & Forecasting",
+          detail:
+            "Developed a specialized analytics view to monitor consumption patterns, allowing for accurate monthly forecasting and reduced inventory waste.",
+        },
+      ],
+      tags: ["C#", "ASP.NET Core MVC", "React JS", "PostgreSQL"],
+      images: [bimmsImg],
+    },
+    {
+      slug: "task-management-system",
+      title: "Task Management System",
+      date: "FEBRUARY 12, 2026",
+      author: "John Michael Macaraig",
+      overview:
+        "A scalable, offline-ready task orchestration platform built with ASP.NET Core and React, designed to maintain enterprise-level productivity even during intermittent network connectivity.",
+      features: [
+        {
+          title: "PWA Background Sync",
+          detail:
+            "Implemented Service Worker registrations to manage background synchronization, ensuring data consistency and application reliability during network fluctuations.",
+        },
+        {
+          title: "Web-Push Notification System",
+          detail:
+            "Developed an offline-ready alert system using the Web-Push API, enabling real-time browser notifications for new assignments even when the application is inactive.",
+        },
+        {
+          title: "High-Concurrency Backend",
+          detail:
+            "Optimized the SQL Server schema to support complex relational data and high-integrity persistence for high-frequency enterprise operations.",
+        },
+        {
+          title: "Decoupled Web Architecture",
+          detail:
+            "Architected using ASP.NET Core Web API and React, ensuring high-speed communication and a clear separation of concerns for easier scalability.",
+        },
+      ],
+      tags: ["ASP.NET Core", "React JS", "SQL Server", "Web-Push API"],
+      images: [taskImg, taskImg1, taskImg2],
     },
   ];
 

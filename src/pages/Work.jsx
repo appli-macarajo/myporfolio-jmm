@@ -12,6 +12,9 @@ import tmsImg2 from "../assets/tms2.png";
 import tmsImg3 from "../assets/tms3.png";
 import portalImg from "../assets/iportalv2.png";
 import bimmsImg from "../assets/bimms0.png";
+import taskImg1 from "../assets/tasksched.png";
+import taskImg2 from "../assets/tasksched1.png";
+import taskImg from "../assets/tasksched0.png";
 
 import { useNavigate } from "react-router-dom";
 
@@ -220,6 +223,7 @@ const Work = ({ darkMode = true }) => {
       link: "#",
     },
     {
+      slug: "training-management-system",
       title: "Training Management System",
       description:
         "A comprehensive platform for managing corporate training programs, tracking employee certifications, and streamlining educational workflows with automated reporting.",
@@ -228,6 +232,7 @@ const Work = ({ darkMode = true }) => {
       link: "#",
     },
     {
+      slug: "iportal-system",
       title: "IPORTAL System",
       description:
         "A lightweight, high-performance gateway designed to centralize access to all in-house applications. Functioning similarly to a professional launcher, it streamlines workflows by providing a faster, unified entry point for internal systems.",
@@ -236,11 +241,21 @@ const Work = ({ darkMode = true }) => {
       link: "#",
     },
     {
+      slug: "budget-and-indirect-material-system",
       title: "Budget & Indirect Material Management System",
       description:
         "An end-to-end inventory and procurement governance platform. It monitors indirect material stock levels and automates the full lifecycle of a request—from initial demand and multi-stage approval (Budget Controller to Senior Management) to final issuing, ensuring strict budget compliance and audit readiness.",
-      tags: ["C#", "ASP.NET Core MVC,", "React JS", "PostgreSQL"],
+      tags: ["C#", "ASP.NET Core MVC", "React JS", "PostgreSQL"],
       images: [bimmsImg],
+      link: "#",
+    },
+    {
+      slug: "task-management-system",
+      title: "Task Management System",
+      description:
+        "An end-to-end inventory and procurement governance platform. It monitors indirect material stock levels and automates the full lifecycle of a request—from initial demand and multi-stage approval (Budget Controller to Senior Management) to final issuing, ensuring strict budget compliance and audit readiness.",
+      tags: ["C#", "ASP.NET Core MVC,", "React JS", "PostgreSQL"],
+      images: [taskImg, taskImg1, taskImg2],
       link: "#",
     },
   ];
